@@ -2,7 +2,7 @@ from application.llm.base import BaseLLM
 
 class HuggingFaceLLM(BaseLLM):
 
-    def __init__(self, api_key, llm_name='Arc53/DocsGPT-7B',q=False):
+    def __init__(self, api_key, llm_name='mistralai/Mistral-7B-Instruct-v0.1',q=False):
         global hf
         
         from langchain.llms import HuggingFacePipeline

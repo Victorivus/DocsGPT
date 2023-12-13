@@ -35,7 +35,7 @@ download_locally() {
     pip install -r application/requirements.txt
     pip install llama-cpp-python
     pip install sentence-transformers
-    export LLM_NAME=llama.cpp
+    export LLM_NAME=huggingface
     export EMBEDDINGS_NAME=huggingface_sentence-transformers/all-mpnet-base-v2
     export FLASK_APP=application/app.py
     export FLASK_DEBUG=true

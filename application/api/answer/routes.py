@@ -138,7 +138,7 @@ def complete_stream(question, docsearch, chat_history, api_key, prompt_id, conve
     messages_combine.append({"role": "user", "content": question})
 
     response_full = ""
-    completion = llm.gen_stream(model=gpt_model, engine=settings.AZURE_DEPLOYMENT_NAME,
+    completion = llm.gen(model=gpt_model, engine=settings.AZURE_DEPLOYMENT_NAME,
                                 messages=messages_combine)
     for line in completion:
         data = json.dumps({"answer": str(line)})
