@@ -38,6 +38,10 @@ class Settings(BaseSettings):
     SAGEMAKER_ACCESS_KEY: str = None # SageMaker access key
     SAGEMAKER_SECRET_KEY: str = None # SageMaker secret key
 
+    # HuggingFace config
+    HF_MODEL: str = 'Arc53/DocsGPT-7B'
+    HF_APIKEY: str = None
+    
 
 path = Path(__file__).parent.parent.absolute()
 settings = Settings(_env_file=path.joinpath(".env"), _env_file_encoding="utf-8")
