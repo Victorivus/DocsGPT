@@ -1,8 +1,9 @@
+from application.core.settings import settings
 from application.llm.base import BaseLLM
 
 class HuggingFaceLLM(BaseLLM):
 
-    def __init__(self, api_key, llm_name='Arc53/DocsGPT-7B',q=False):
+    def __init__(self, api_key=settings.HF_APIKEY, llm_name=settings.HF_MODEL, q=False):
         global hf
         
         from langchain.llms import HuggingFacePipeline
